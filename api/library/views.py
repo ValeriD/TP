@@ -7,7 +7,6 @@ from .pagination import BookLimitPagination, MemberLimitPagination, AuthorLimitP
 class BookView(viewsets.ModelViewSet):
     queryset = Book.objects.all()
     serializer_class = BookSerializer
-    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
     pagination_class = BookLimitPagination
 
 class AuthorView(viewsets.ModelViewSet):
