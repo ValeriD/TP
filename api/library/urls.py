@@ -6,6 +6,7 @@ router = routers.DefaultRouter()
 router.register('books', views.BookView)
 router.register('authors', views.AuthorView)
 router.register('members', views.MemberView)
+router.register('', views.BookView)
 
 urlpatterns = [
     url('', include(router.urls))
