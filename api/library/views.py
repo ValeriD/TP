@@ -29,3 +29,6 @@ class MemberView(viewsets.ModelViewSet):
     queryset = Member.objects.all()
     serializer_class = MemberSerializer
     pagination_class = MemberLimitPagination
+
+def index(request):
+    return render(request, 'index.html')
